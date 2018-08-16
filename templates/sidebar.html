@@ -67,7 +67,7 @@
         <li><a href="{% url 'member:logout' %}"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
         {% else %}
         <li class="parent "><a data-toggle="collapse" href="#sub-item-3">
-            <em class="fa fa-navicon">&nbsp;</em> Login <span data-toggle="collapse" href="#sub-item-3" class="icon pull-right"><em class="fa fa-plus"></em></span>
+            <i class="fas fa-user"></i>&nbsp;</em> Login <span data-toggle="collapse" href="#sub-item-3" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-3">
                 {% include 'member.html' %}
