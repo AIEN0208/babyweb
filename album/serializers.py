@@ -5,3 +5,9 @@ class AlbumSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Album
         fields = ('UserId', 'ImageName', 'Image')
+
+class PaintSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Paint
+        fields = ('UserId', 'ImageName', 'Image')
+

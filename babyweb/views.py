@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import render_to_response
 from member.models import Member
 from album.models import Album
+from album.models import Paint
 import datetime
 import album.serializers as serializers
 from rest_framework import viewsets
@@ -10,6 +11,10 @@ from rest_framework import viewsets
 class AlbumViewSet(viewsets.ModelViewSet):
     queryset = Album.objects.all()
     serializer_class = serializers.AlbumSerializer
+
+class PaintViewSet(viewsets.ModelViewSet):
+    queryset = Paint.objects.all()
+    serializer_class = serializers.PaintSerializer
 
 
 def login(request):
