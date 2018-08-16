@@ -8,4 +8,5 @@ app_name="album"
 
 urlpatterns = [
     path('',views.index,name='index'),
+    path('paint/', views.paint, name='paint')
 ]

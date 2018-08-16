@@ -1,0 +1,31 @@
+{% extends 'base.html' %}{% block content %}
+{% load static %}
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-home"></em>
+				</a></li>
+				<li class="active">Artist</li>
+			</ol>
+        </div><!--/.row-->
+        <div class="row">
+			<div class="col-lg-12">
+            <h2>{{ member.BabyName }} 小小藝術家的作品集<span class="badge badge-secondary">New</span></h2>
+            {% for paint in paints %}
+                <div class="card col-lg-4" style="margin-top:15px">
+                    <img class="card-img-top" src="/media/{{ paint.Image }}" alt="Card image cap" width=90%>
+                    <div class="card-body">
+                    <h4 class="card-title">{{ paint.ImageName }}</h4>
+                    <!-- <a href="#" class="btn btn-primary">Download</a> -->
+                    </div>
+                </div>
+            {% endfor %}
+			</div><!--/.col-lg-12-->
+		</div><!--/.row-->
+	</div>	<!--/.main-->
+{% endblock %}
+
+{% block scripts %}
+
+{% endblock %}

@@ -10,5 +10,7 @@ class Album(models.Model):
     ImageName = models.CharField(db_column='ImageName', max_length=60)  # Field name made lowercase.
     Image = models.ImageField(upload_to='images')
 
-    # class Meta:
-    #     db_table = 'album'
+class Paint(models.Model):
+    UserId = models.IntegerField(db_column='UserId')  # Field name made lowercase.
+    ImageName = models.CharField(db_column='PaintName', max_length=60)  # Field name made lowercase.
+    Image = models.ImageField(upload_to='paint')
