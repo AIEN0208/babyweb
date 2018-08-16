@@ -1,0 +1,28 @@
+{% load static %}
+    {% if request.COOKIES.name %}
+        <div class = "text-center">
+            <img src = "/media/{{request.COOKIES.name}}.jpg" class="border border-secondary rounded-circle w-50" style="border-width: 3px !important" onerror="this.src='/media/head_pic.jpg'">
+            <h2>{{ request.COOKIES.name }}</h2>
+            <a href = "{% url 'members:logout' %}" class="btn btn-danger mt-2"></i>登出</a>
+        </div>
+        
+    {% else %}
+        <form class='px-3' method="POST" action= {% url 'login' %}>
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Email address</label>
+                <input type="email" class="form-control" id="email" name="email"  aria-describedby="emailHelp" placeholder="請輸入您的信箱">
+            </div>
+            <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="請輸入您的密碼">
+            </div>
+            <div class="form-check my-3">
+                <input type="checkbox" class="form-check-input" id="rememberme" name="rememberme">
+                <label class="form-check-label" for="rememberme">
+                記住我
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary mt-2" id="login"></i>登入</button>
+        </form>
+    {% endif %}
