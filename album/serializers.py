@@ -11,3 +11,7 @@ class PaintSerializer(serializers.ModelSerializer):
         model = models.Paint
         fields = ('UserId', 'ImageName', 'Image')
 
+class CoveredSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Covered
+        fields = ('UserId', 'ImageName', 'Image')

@@ -4,6 +4,7 @@ from django.shortcuts import render_to_response
 from member.models import Member
 from album.models import Album
 from album.models import Paint
+from album.models import Covered
 import datetime
 import album.serializers as serializers
 from rest_framework import viewsets
@@ -15,6 +16,10 @@ class AlbumViewSet(viewsets.ModelViewSet):
 class PaintViewSet(viewsets.ModelViewSet):
     queryset = Paint.objects.all()
     serializer_class = serializers.PaintSerializer
+
+class CoveredViewSet(viewsets.ModelViewSet):
+    queryset = Covered.objects.all()
+    serializer_class = serializers.CoveredSerializer
 
 
 def login(request):

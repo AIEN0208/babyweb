@@ -17,6 +17,7 @@
                     <img class="card-img-top" src="/media/{{ paint.Image }}" alt="Card image cap" width=90%>
                     <div class="card-body">
                     <h4 class="card-title">{{ paint.ImageName }}</h4>
+                    <a href="{% url 'album:dpaint' paint.id %}" class="btn btn-danger">Delete</a>
                     <!-- <a href="#" class="btn btn-primary">Download</a> -->
                     </div>
                 </div>

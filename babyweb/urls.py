@@ -24,12 +24,12 @@ from django.conf.urls.static import static
 router = DefaultRouter()
 router.register(r'album', views.AlbumViewSet)
 router.register(r'paint', views.PaintViewSet)
+router.register(r'covered', views.CoveredViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
     url(r'login/$',views.login, name = 'login'),
-    # path('demo/', include('demo.urls')),
     path('member/', include('member.urls')),
     path('album/', include('album.urls')),
     url(r'^api/', include(router.urls)),

@@ -14,3 +14,8 @@ class Paint(models.Model):
     UserId = models.IntegerField(db_column='UserId')  # Field name made lowercase.
     ImageName = models.CharField(db_column='PaintName', max_length=60)  # Field name made lowercase.
     Image = models.ImageField(upload_to='paint')
+
+class Covered(models.Model):
+    UserId = models.IntegerField(db_column='UserId')  # Field name made lowercase.
+    ImageName = models.CharField(db_column='CoveredName', max_length=60)  # Field name made lowercase.
+    Image = models.ImageField(upload_to='covered')
