@@ -12,7 +12,7 @@ def index(request):
         member = Member.objects.filter(id = UserId)[0]
         response = render(request, "album/index.html", locals())
     else:
-        response = HttpResponse("<script>alert('請先登入才可以看到寶寶的照片喔!'); location.href = window.history.back(1) </script>")   
+        response = HttpResponse("<script>alert('請先登入才可以看到寶寶的照片喔!'); location.href = '/' </script>")   
     
     return response
 
@@ -23,7 +23,7 @@ def paint(request):
         member = Member.objects.filter(id = UserId)[0]
         response = render(request, "album/paint.html", locals())
     else:
-        response = HttpResponse("<script>alert('請先登入才可以看到寶寶的作品喔!'); location.href = window.history.back(1) </script>")
+        response = HttpResponse("<script>alert('請先登入才可以看到寶寶的作品喔!'); location.href = '/' </script>")
     return response
 
 def covered(request):
