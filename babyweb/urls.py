@@ -33,4 +33,5 @@ urlpatterns = [
     path('member/', include('member.urls')),
     path('album/', include('album.urls')),
     url(r'^api/', include(router.urls)),
+    path('demo/', include('demo.urls')),
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

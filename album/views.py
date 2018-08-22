@@ -27,9 +27,7 @@ def paint(request):
     return response
 
 def covered(request):
-    UserId = request.COOKIES['id']
-    member = Member.objects.filter(id = UserId)[0]
-    covered = Covered.objects.filter(UserId = UserId)
+    covered = Covered.objects.filter(UserId = 1)
     return render(request, "album/covered.html", locals())
 
 def dalbum(request,id):

@@ -34,19 +34,22 @@
             <em class="fa fa-navicon">&nbsp;</em> Demo <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right"><em class="fa fa-plus"></em></span>
             </a>
             <ul class="children collapse" id="sub-item-1">
-                <li><a class="" href="#">
+                <li><a class="" href="{% url 'demo:linebot' %}">
+                    <span class="fa fa-arrow-right">&nbsp;</span> Line 聊天機器人
+                </a></li>
+                <li><a class="" href="{% url 'demo:eyesnose' %}">
                     <span class="fa fa-arrow-right">&nbsp;</span> 鼻子遮掩與睜眼
                 </a></li>
-                <li><a class="" href="#">
-                    <span class="fa fa-arrow-right">&nbsp;</span> 哭泣偵測
+                <li><a class="" href="{% url 'demo:sound' %}">
+                    <span class="fa fa-arrow-right">&nbsp;</span> 聲音辨識
                 </a></li>
-                <li><a class="" href="#">
+                <li><a class="" href="{% url 'demo:areas' %}">
                     <span class="fa fa-arrow-right">&nbsp;</span> 危險區域進入
                 </a></li>
-                <li><a class="" href="#">
-                    <span class="fa fa-arrow-right">&nbsp;</span> 心情愉悅拍照記錄
+                <li><a class="" href="{% url 'demo:emotion' %}">
+                    <span class="fa fa-arrow-right">&nbsp;</span> 表情辨認與自動拍照
                 </a></li>
-                <li><a class="" href="#">
+                <li><a class="" href="{% url 'demo:paint' %}">
                     <span class="fa fa-arrow-right">&nbsp;</span> 手部揮動軌跡製圖
                 </a></li>
             </ul>
